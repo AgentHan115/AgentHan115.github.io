@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chuhan Wang</title>
+<meta name="description" content="Chuhan Wang — product, built with an engineer's hands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html{ scroll-behavior:smooth; }
+  *, *::before, *::after{ box-sizing:border-box; }
+  body{ margin:0; background:#F4F2EC; color:#14140F; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection{ background:#14140F; color:#F4F2EC; }
+  @keyframes riseIn{ from{ opacity:0; transform:translateY(22px); } to{ opacity:1; transform:translateY(0); } }
+  @keyframes drawLine{ from{ transform:scaleX(0); } to{ transform:scaleX(1); } }
+  @keyframes marquee{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+  @media (max-width:900px){ .two-col{ grid-template-columns:1fr !important; } .hero-grid{ grid-template-columns:1fr !important; } .lab-wide{ grid-template-columns:1fr !important; } .lab-portrait{ grid-template-columns:1fr 1fr !important; } .path-row{ grid-template-columns:1fr !important; } .nav-links{ gap:16px !important; } .nav-links a{ font-size:.66rem !important; letter-spacing:.05em !important; } .filmstrip{ height:min(48vh,400px) !important; } }
+  .filmstrip::-webkit-scrollbar{ display:none; }
+  @media (max-width:560px){ .nav-links{ gap:11px !important; } .nav-links a{ font-size:.58rem !important; letter-spacing:.02em !important; } .nav-name{ font-size:.95rem !important; } .filmstrip{ height:min(44vh,340px) !important; } }
+</style>
+</helmet>
+
+<div style="font-family:Archivo, system-ui, sans-serif; background:#F4F2EC; color:#14140F; overflow-x:hidden;">
+
+  <div ref="{{ cursorRef }}" style="position:fixed; top:0; left:0; width:9px; height:9px; margin:-4.5px 0 0 -4.5px; border-radius:50%; background:#14140F; pointer-events:none; z-index:900; mix-blend-mode:difference; opacity:0; transition:width .3s cubic-bezier(.2,.7,.2,1), height .3s cubic-bezier(.2,.7,.2,1), margin .3s cubic-bezier(.2,.7,.2,1), background .3s ease, border-color .3s ease;"></div>
+
+  <nav style="position:fixed; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:26px 6vw; z-index:800; mix-blend-mode:difference; color:#EDEAE0; pointer-events:none;">
+    <a href="#top" class="nav-name" style="font-family:'Instrument Serif', serif; font-size:1.2rem; color:#EDEAE0; text-decoration:none; letter-spacing:.01em; pointer-events:auto;">Chuhan Wang</a>
+    <div class="nav-links" style="display:flex; gap:30px; align-items:center; pointer-events:auto;">
+      <a href="#path" style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.09em; text-transform:uppercase; color:#EDEAE0; text-decoration:none;">Path</a>
+      <a href="#craft" style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.09em; text-transform:uppercase; color:#EDEAE0; text-decoration:none;">Craft</a>
+      <a href="#lab" style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.09em; text-transform:uppercase; color:#EDEAE0; text-decoration:none;">Lab</a>
+      <a href="#eye" style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.09em; text-transform:uppercase; color:#EDEAE0; text-decoration:none;">Eye</a>
+      <a href="#reach" style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.09em; text-transform:uppercase; color:#EDEAE0; text-decoration:none;">Reach</a>
+    </div>
+  </nav>
+
+  <section id="top" data-screen-label="Intro" style="padding:min(26vh,200px) 6vw 96px; max-width:1360px; margin:0 auto;">
+    <div class="hero-grid" style="display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:60px; align-items:end;">
+      <div>
+        <div style="overflow:hidden;">
+          <h1 style="font-family:'Instrument Serif', serif; font-weight:400; margin:0; font-size:clamp(3.4rem,10vw,7.4rem); line-height:0.92; letter-spacing:-0.02em; animation:riseIn .9s cubic-bezier(.2,.7,.2,1) both;">Chuhan Wang</h1>
+        </div>
+        <div style="height:1px; background:#DCD8CB; margin:34px 0 26px; transform-origin:left; animation:drawLine 1.1s .25s cubic-bezier(.2,.7,.2,1) both;"></div>
+        <div style="animation:riseIn .9s .18s cubic-bezier(.2,.7,.2,1) both;">
+          <div style="font-family:'JetBrains Mono', monospace; font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; color:#A65A2E;">MSCS @ USC (2nd year)</div>
+          <p style="margin:18px 0 0; max-width:560px; font-size:1.06rem; line-height:1.68; color:#4A4839; text-wrap:pretty;">Drawn to computer systems, AI, and the engineering behind how things work.</p>
+          <p style="margin:12px 0 0; max-width:560px; font-size:1.06rem; line-height:1.68; color:#4A4839; text-wrap:pretty;">Enjoy learning, creating, and building new things — sometimes to solve real problems, sometimes just for fun — while exploring how AI is changing the way we build and live.</p>
+          <p style="margin:22px 0 0; font-family:'Instrument Serif', serif; font-style:italic; font-size:1.5rem; color:#14140F;">Stay curious. Stay resilient.</p>
+        </div>
+        <div style="margin-top:44px; display:flex; gap:12px; flex-wrap:wrap; animation:riseIn .9s .3s cubic-bezier(.2,.7,.2,1) both;">
+          <a href="#lab" style="font-family:'JetBrains Mono', monospace; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:#F4F2EC; background:#14140F; text-decoration:none; padding:13px 22px; display:inline-block;" style-hover="background:#A65A2E;">See the work</a>
+          <a href="#reach" style="font-family:'JetBrains Mono', monospace; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; color:#14140F; border:1px solid #DCD8CB; text-decoration:none; padding:13px 22px; display:inline-block;" style-hover="border-color:#14140F;">Get in touch</a>
+        </div>
+      </div>
+
+      <div style="animation:riseIn .9s .42s cubic-bezier(.2,.7,.2,1) both;">
+        <div onClick="{{ nextMe }}" style="position:relative; width:100%; aspect-ratio:3/4; cursor:pointer;">
+          <sc-for list="{{ mePhotos }}" as="m">
+            <div role="img" aria-label="Chuhan Wang" style="{{ m.style }}"></div>
+          </sc-for>
+        </div>
+        <div style="margin-top:14px; display:flex; justify-content:space-between; align-items:center; font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:#8B8878;">
+          <span>{{ meCount }}</span>
+          <button onClick="{{ nextMe }}" style="font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:#14140F; background:none; border:none; border-bottom:1px solid #DCD8CB; padding:0 0 3px; cursor:pointer;">Flip ↻</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:80px; border-top:1px solid #DCD8CB; border-bottom:1px solid #DCD8CB; overflow:hidden; padding:14px 0;">
+      <div style="display:flex; width:max-content; animation:marquee 34s linear infinite; font-family:'Instrument Serif', serif; font-style:italic; font-size:1.35rem; color:#8B8878; white-space:nowrap;">
+        <span style="padding-right:38px;">Los Angeles, CA</span><span style="padding-right:38px;">·</span>
+        <span style="padding-right:38px;">M.S. Computer Science, USC</span><span style="padding-right:38px;">·</span>
+        <span style="padding-right:38px;">PM · AI Strategy</span><span style="padding-right:38px;">·</span>
+        <span style="padding-right:38px;">Marketplace 0→1 at Baidu</span><span style="padding-right:38px;">·</span>
+        <span style="padding-right:38px;">Los Angeles, CA</span><span style="padding-right:38px;">·</span>
+        <span style="padding-right:38px;">M.S. Computer Science, USC</span><span style="padding-right:38px;">·</span>
+        <span style="padding-right:38px;">PM · AI Strategy</span><span style="padding-right:38px;">·</span>
+        <span style="padding-right:38px;">Marketplace 0→1 at Baidu</span><span style="padding-right:38px;">·</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="path" data-screen-label="Path" style="padding:110px 6vw 96px; max-width:1360px; margin:0 auto;">
+    <div data-reveal style="display:flex; align-items:baseline; gap:18px; margin-bottom:10px;">
+      <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; color:#A65A2E;">01</span>
+      <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:#8B8878;">Path</span>
+    </div>
+    <h2 data-reveal style="font-family:'Instrument Serif', serif; font-weight:400; margin:0; font-size:clamp(2.4rem,5.4vw,3.8rem); letter-spacing:-0.015em;">Where I've been</h2>
+
+    <div style="margin-top:56px;">
+      <div class="path-row" data-reveal style="display:grid; grid-template-columns:200px minmax(0,1fr); gap:10px 40px; padding:30px 0; border-top:1px solid #DCD8CB;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:.76rem; color:#8B8878; letter-spacing:.02em; padding-top:8px;">Sept 2022 — Jun 2025</div>
+        <div>
+          <div style="font-family:'Instrument Serif', serif; font-size:1.9rem; line-height:1.2;">University of Waterloo</div>
+          <div style="margin-top:6px; font-size:.95rem; color:#6B6857;">B.E.S. in Geomatics, Minor in Computing · Top Standing, 3.91/4.0</div>
+        </div>
+      </div>
+
+      <div class="path-row" data-reveal style="display:grid; grid-template-columns:200px minmax(0,1fr); gap:10px 40px; padding:30px 0; border-top:1px solid #DCD8CB;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:.76rem; color:#8B8878; letter-spacing:.02em; padding-top:8px;">Sept 2025 — Dec 2027</div>
+        <div>
+          <div style="font-family:'Instrument Serif', serif; font-size:1.9rem; line-height:1.2;">University of Southern California</div>
+          <div style="margin-top:6px; font-size:.95rem; color:#6B6857;">M.S. in Computer Science</div>
+        </div>
+      </div>
+
+      <div class="path-row" data-reveal style="display:grid; grid-template-columns:200px minmax(0,1fr); gap:10px 40px; padding:30px 0; border-top:1px solid #DCD8CB;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:.76rem; color:#8B8878; letter-spacing:.02em; padding-top:8px;">Jun — Sept 2026</div>
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; cursor:pointer;" onClick="{{ toggleBaidu }}">
+            <div>
+              <div style="font-family:'Instrument Serif', serif; font-size:1.9rem; line-height:1.2;">Baidu — Miaoda AI App Builder</div>
+              <div style="margin-top:6px; font-size:.95rem; color:#6B6857;">AI Product Manager Intern · Beijing, China</div>
+            </div>
+            <span style="{{ baiduIconStyle }}">+</span>
+          </div>
+          <div style="{{ baiduPanelStyle }}">
+            <p style="margin:14px 0 0; max-width:620px; font-size:.97rem; line-height:1.7; text-wrap:pretty;">Took the template marketplace from 0 to 1 — pricing, creator payouts, and transaction safety at full platform scale. Rebuilt template ranking around real behavioral signals, cutting weekly top-slot repetition from 91% to 79%.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="path-row" data-reveal style="display:grid; grid-template-columns:200px minmax(0,1fr); gap:10px 40px; padding:30px 0; border-top:1px solid #DCD8CB;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:.76rem; color:#8B8878; letter-spacing:.02em; padding-top:8px;">May 2026 — Present</div>
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:20px; cursor:pointer;" onClick="{{ toggleMnb }}">
+            <div>
+              <div style="font-family:'Instrument Serif', serif; font-size:1.9rem; line-height:1.2;">MusicNBrain</div>
+              <div style="margin-top:6px; font-size:.95rem; color:#6B6857;">Software Engineering Intern · San Francisco, CA (Remote)</div>
+            </div>
+            <span style="{{ mnbIconStyle }}">+</span>
+          </div>
+          <div style="{{ mnbPanelStyle }}">
+            <p style="margin:14px 0 0; max-width:620px; font-size:.97rem; line-height:1.7; text-wrap:pretty;">Built the orchestration backend behind live AI lessons — a 9-state session lifecycle, re-architected from one shared bot to eight running concurrently, streaming real-time avatar audio from AWS.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="path-row" data-reveal style="display:grid; grid-template-columns:200px minmax(0,1fr); gap:10px 40px; padding:30px 0; border-top:1px solid #DCD8CB; border-bottom:1px solid #DCD8CB;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:.76rem; color:#8B8878; letter-spacing:.02em; padding-top:8px;">Sept 2026 — ongoing</div>
+        <div>
+          <div style="font-family:'Instrument Serif', serif; font-size:1.9rem; line-height:1.2;">USC Annenberg Media</div>
+          <div style="margin-top:6px; font-size:.95rem; color:#6B6857;">Web Developer · Part-time</div>
+          <span style="display:inline-block; margin-top:14px; font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:#A65A2E; border:1px solid #A65A2E; padding:4px 11px;">Just started</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="craft" data-screen-label="Craft" style="padding:110px 6vw 96px; max-width:1360px; margin:0 auto;">
+    <div data-reveal style="display:flex; align-items:baseline; gap:18px; margin-bottom:10px;">
+      <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; color:#A65A2E;">02</span>
+      <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:#8B8878;">Craft</span>
+    </div>
+    <h2 data-reveal style="font-family:'Instrument Serif', serif; font-weight:400; margin:0; font-size:clamp(2.4rem,5.4vw,3.8rem); letter-spacing:-0.015em;">Things I'm specialized in</h2>
+
+    <div class="two-col" style="margin-top:56px; display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:56px 90px;">
+      <div>
+        <div data-reveal style="margin-bottom:30px;">
+          <div style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:10px; border-bottom:1px solid #DCD8CB; margin-bottom:14px;">Languages</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Java</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Python</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">C++</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">TypeScript / JavaScript</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">SQL</span>
+          </div>
+        </div>
+        <div data-reveal style="margin-bottom:30px;">
+          <div style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:10px; border-bottom:1px solid #DCD8CB; margin-bottom:14px;">Frameworks &amp; APIs</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Spring Boot</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Flask</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Fastify</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">React</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">REST APIs</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Microservices</span>
+          </div>
+        </div>
+        <div data-reveal style="margin-bottom:30px;">
+          <div style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:10px; border-bottom:1px solid #DCD8CB; margin-bottom:14px;">AI &amp; Agent Development</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">LangChain</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">MCP</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">LLM API Integration</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Prompt Engineering</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Agentic Workflows</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Claude Code</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Cursor</span>
+          </div>
+        </div>
+        <div data-reveal style="margin-bottom:30px;">
+          <div style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:10px; border-bottom:1px solid #DCD8CB; margin-bottom:14px;">Databases &amp; Messaging</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">PostgreSQL</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">MySQL</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">MongoDB</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Redis</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Kafka</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">BullMQ</span>
+          </div>
+        </div>
+        <div data-reveal>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:10px; border-bottom:1px solid #DCD8CB; margin-bottom:14px;">Cloud &amp; DevOps</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">AWS (EC2, S3, EKS)</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Docker</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Kubernetes</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">CI/CD</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">GitHub Actions</span><span style="font-size:.87rem; padding:6px 12px; border:1px solid #DCD8CB; border-radius:2px;">Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:10px; border-bottom:1px solid #DCD8CB; margin-bottom:6px;">Achievements</div>
+        <div style="padding:24px 0; border-bottom:1px solid #DCD8CB;">
+          <div style="font-family:'Instrument Serif', serif; font-size:1.55rem; line-height:1.25;">Outstanding Team Award</div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:.72rem; color:#A65A2E; margin-top:6px; letter-spacing:.04em;">ByteDance Hackathon</div>
+          <p style="margin:12px 0 0; font-size:.93rem; line-height:1.65; color:#6B6857; text-wrap:pretty;">AIGC E-commerce Video Generation — built a recommendation model ranking audience-strategy pairs by ROAS and GMV, with empirical-Bayes shrinkage to correct small-sample bias.</p>
+        </div>
+        <div style="padding:24px 0; border-bottom:1px solid #DCD8CB;">
+          <div style="font-family:'Instrument Serif', serif; font-size:1.55rem; line-height:1.25;">Certified Creator</div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:.72rem; color:#A65A2E; margin-top:6px; letter-spacing:.04em;">Baidu Miaoda AI App Builder</div>
+          <p style="margin:12px 0 0; font-size:.93rem; line-height:1.65; color:#6B6857; text-wrap:pretty;">Recognized creator status on the platform — the work behind it is in Lab, below.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lab" data-screen-label="Lab" style="padding:110px 6vw 96px; max-width:1360px; margin:0 auto;">
+    <div data-reveal style="display:flex; align-items:baseline; gap:18px; margin-bottom:10px;">
+      <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; color:#A65A2E;">03</span>
+      <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:#8B8878;">Lab</span>
+    </div>
+    <h2 data-reveal style="font-family:'Instrument Serif', serif; font-weight:400; margin:0; font-size:clamp(2.4rem,5.4vw,3.8rem); letter-spacing:-0.015em;">Fun things I build</h2>
+    <p data-reveal style="margin:18px 0 0; max-width:540px; color:#6B6857; font-size:1rem; line-height:1.7; text-wrap:pretty;">Built on Miaoda, Baidu's AI app builder — where I also worked as a PM. Each one is live.</p>
+
+    <div style="margin-top:60px;">
+      <div data-reveal style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:12px; border-bottom:1px solid #DCD8CB;">Interactive Experiences</div>
+      <div class="lab-wide" style="margin-top:26px; display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+        <a data-reveal href="https://app-egt02r93nksh.appmiaoda.com" target="_blank" rel="noopener" style="display:block; color:#14140F; text-decoration:none;" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}">
+          <div style="position:relative; overflow:hidden; background:#E9E6DC; aspect-ratio:16/9.4;">
+            <img src="assets/lab/typetype.jpg" alt="typetype — typing shooter game" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1);">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; margin-top:16px;">
+            <div style="font-family:'Instrument Serif', serif; font-size:1.5rem;">typetype</div>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:#A65A2E; white-space:nowrap;">view demo ↗</span>
+          </div>
+          <p style="margin:6px 0 0; font-size:.92rem; line-height:1.6; color:#6B6857; max-width:420px; text-wrap:pretty;">A typing-shooter game in a dark space theme — clear the words before they land.</p>
+        </a>
+        <a data-reveal href="https://app-dj6l3ln6wqgx.appmiaoda.com" target="_blank" rel="noopener" style="display:block; color:#14140F; text-decoration:none;" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}">
+          <div style="position:relative; overflow:hidden; background:#E9E6DC; aspect-ratio:16/9.4;">
+            <img src="assets/lab/odyssey.jpg" alt="The Odyssey — interactive literature game" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1);">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; margin-top:16px;">
+            <div style="font-family:'Instrument Serif', serif; font-size:1.5rem;">The Odyssey</div>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:#A65A2E; white-space:nowrap;">view demo ↗</span>
+          </div>
+          <p style="margin:6px 0 0; font-size:.92rem; line-height:1.6; color:#6B6857; max-width:420px; text-wrap:pretty;">An interactive telling of Homer's epic, paced by choice and text rather than reflex.</p>
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-top:72px;">
+      <div data-reveal style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:12px; border-bottom:1px solid #DCD8CB;">Immersive Brand Sites</div>
+      <div class="lab-wide" style="margin-top:26px; display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+        <a data-reveal href="https://app-egsztjrwqcxt.appmiaoda.com" target="_blank" rel="noopener" style="display:block; color:#14140F; text-decoration:none;" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}">
+          <div style="position:relative; overflow:hidden; background:#E9E6DC; aspect-ratio:16/9.4;">
+            <img src="assets/lab/brain-and-body.jpg" alt="Brain And Body — immersive brand site" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1);">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; margin-top:16px;">
+            <div style="font-family:'Instrument Serif', serif; font-size:1.5rem;">Brain And Body</div>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:#A65A2E; white-space:nowrap;">view demo ↗</span>
+          </div>
+          <p style="margin:6px 0 0; font-size:.92rem; line-height:1.6; color:#6B6857; max-width:420px; text-wrap:pretty;">A single-page brand site built on video and motion — specs and architecture told as a story.</p>
+        </a>
+        <a data-reveal href="https://app-ceazc12juubl.appmiaoda.com" target="_blank" rel="noopener" style="display:block; color:#14140F; text-decoration:none;" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}">
+          <div style="position:relative; overflow:hidden; background:#E9E6DC; aspect-ratio:16/9.4;">
+            <img src="assets/lab/obys.jpg" alt="OBYS Agency study — motion and interaction" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1);">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:16px; margin-top:16px;">
+            <div style="font-family:'Instrument Serif', serif; font-size:1.5rem;">OBYS Agency, rebuilt</div>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:#A65A2E; white-space:nowrap;">view demo ↗</span>
+          </div>
+          <p style="margin:6px 0 0; font-size:.92rem; line-height:1.6; color:#6B6857; max-width:420px; text-wrap:pretty;">A study of OBYS Agency's own site — preloader, custom cursor, inertia scroll. This page borrows its manners.</p>
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-top:72px;">
+      <div data-reveal style="font-family:'JetBrains Mono', monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8B8878; padding-bottom:12px; border-bottom:1px solid #DCD8CB;">Small-Business Web</div>
+      <div class="lab-portrait" style="margin-top:26px; display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+        <a data-reveal href="https://app-egswt8yu5xq9.appmiaoda.com" target="_blank" rel="noopener" style="display:block; color:#14140F; text-decoration:none;" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}">
+          <div style="position:relative; overflow:hidden; background:#E9E6DC; aspect-ratio:9/16.4;">
+            <img src="assets/lab/coffee.jpg" alt="Coffee brand mini-site with AI agent interaction" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1);">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-top:14px;">
+            <div style="font-family:'Instrument Serif', serif; font-size:1.25rem;">Coffee</div>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:.64rem; letter-spacing:.06em; text-transform:uppercase; color:#A65A2E; white-space:nowrap;">↗</span>
+          </div>
+          <p style="margin:5px 0 0; font-size:.86rem; line-height:1.55; color:#6B6857; text-wrap:pretty;">A new-Chinese coffee brand site pairing a refined visual identity with AI agent interaction.</p>
+        </a>
+        <a data-reveal href="https://app-egsx5yq0ao01.appmiaoda.com" target="_blank" rel="noopener" style="display:block; color:#14140F; text-decoration:none;" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}">
+          <div style="position:relative; overflow:hidden; background:#E9E6DC; aspect-ratio:9/16.4;">
+            <img src="assets/lab/wedding.jpg" alt="Wedding photography booking mini-site" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1);">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-top:14px;">
+            <div style="font-family:'Instrument Serif', serif; font-size:1.25rem;">Mococo Photo</div>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:.64rem; letter-spacing:.06em; text-transform:uppercase; color:#A65A2E; white-space:nowrap;">↗</span>
+          </div>
+          <p style="margin:5px 0 0; font-size:.86rem; line-height:1.55; color:#6B6857; text-wrap:pretty;">A wedding studio's booking flow — browse the work, pick a package, hold a date.</p>
+        </a>
+        <a data-reveal href="https://app-egsw7riq0fep.appmiaoda.com" target="_blank" rel="noopener" style="display:block; color:#14140F; text-decoration:none;" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}">
+          <div style="position:relative; overflow:hidden; background:#E9E6DC; aspect-ratio:9/16.4;">
+            <img src="assets/lab/restaurant.jpg" alt="Fine dining QR ordering mini-site" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1);">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-top:14px;">
+            <div style="font-family:'Instrument Serif', serif; font-size:1.25rem;">Fine Dining</div>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:.64rem; letter-spacing:.06em; text-transform:uppercase; color:#A65A2E; white-space:nowrap;">↗</span>
+          </div>
+          <p style="margin:5px 0 0; font-size:.86rem; line-height:1.55; color:#6B6857; text-wrap:pretty;">A QR ordering flow for a fine-dining restaurant — scan, browse, order.</p>
+        </a>
+        <a data-reveal href="https://app-cdejek0sadq9.appmiaoda.com" target="_blank" rel="noopener" style="display:block; color:#14140F; text-decoration:none;" onMouseEnter="{{ zoomIn }}" onMouseLeave="{{ zoomOut }}">
+          <div style="position:relative; overflow:hidden; background:#E9E6DC; aspect-ratio:9/16.4;">
+            <img src="assets/lab/flower.jpg" alt="Monet-styled flower shop mini-site" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block; transition:transform .8s cubic-bezier(.2,.7,.2,1);">
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-top:14px;">
+            <div style="font-family:'Instrument Serif', serif; font-size:1.25rem;">Floating Light</div>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:.64rem; letter-spacing:.06em; text-transform:uppercase; color:#A65A2E; white-space:nowrap;">↗</span>
+          </div>
+          <p style="margin:5px 0 0; font-size:.86rem; line-height:1.55; color:#6B6857; text-wrap:pretty;">A flower shop styled after Monet — oil-painted gardens for everyday gifting.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="eye" data-screen-label="Eye" style="background:#14140F; color:#EDEAE0; padding:110px 6vw 100px; margin-top:40px;">
+    <div style="max-width:1360px; margin:0 auto;">
+      <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; color:#D98A55;">04</span>
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:#8F8B7C;">Eye</span>
+      </div>
+      <h2 style="font-family:'Instrument Serif', serif; font-weight:400; margin:0; font-size:clamp(2.4rem,5.4vw,3.8rem); letter-spacing:-0.015em; color:#EDEAE0;">Things I notice</h2>
+      <p style="margin:18px 0 0; max-width:540px; color:#9B9787; font-size:1rem; line-height:1.7; text-wrap:pretty;">Shot on an X-T5, an R50, and whatever phone was in my pocket.</p>
+
+      <div style="margin-top:44px; display:flex; flex-wrap:wrap; gap:10px;">
+        <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+          <button onClick="{{ c.pick }}" style="{{ c.style }}">{{ c.label }}</button>
+        </sc-for>
+      </div>
+      <div style="margin-top:14px; display:flex; justify-content:space-between; align-items:baseline; gap:20px; flex-wrap:wrap; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:#9B9787; letter-spacing:.02em;">
+        <span>{{ catNote }}</span>
+        <span style="color:#9B9787;">{{ frameCount }} — drag to scroll</span>
+      </div>
+    </div>
+
+    <div ref="{{ stripRef }}" class="filmstrip" style="margin-top:34px; height:min(58vh,520px); overflow-x:auto; overflow-y:hidden; display:flex; gap:14px; padding:0 6vw; margin-left:-6vw; margin-right:-6vw; cursor:grab; scrollbar-width:none;">
+      <sc-for list="{{ photos }}" as="p" hint-placeholder-count="10">
+        <div style="position:relative; height:100%; flex:0 0 auto; overflow:hidden; background:#1C1B15;" onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}">
+          <img src="{{ p.src }}" alt="{{ p.alt }}" loading="lazy" draggable="false" style="{{ p.imgStyle }}">
+          <div style="{{ p.metaStyle }}">
+            <div style="font-family:'Instrument Serif', serif; font-style:italic; font-size:1.1rem; color:#F4F2EC;">{{ p.catLabel }}</div>
+            <div style="margin-top:6px; font-family:'JetBrains Mono', monospace; font-size:.68rem; line-height:1.8; color:#C9C6B9; letter-spacing:.02em;">
+              <div>{{ p.place }}</div>
+              <div>{{ p.when }}</div>
+              <div>{{ p.device }}</div>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="max-width:1360px; margin:22px auto 0;">
+      <div style="height:1px; background:#2E2C24; position:relative;">
+        <div ref="{{ progRef }}" style="position:absolute; left:0; top:-1px; height:3px; width:18%; background:#D98A55; transition:width .2s ease;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reach" data-screen-label="Reach" style="padding:110px 6vw 90px; max-width:1360px; margin:0 auto;">
+    <div data-reveal style="display:flex; align-items:baseline; gap:18px; margin-bottom:10px;">
+      <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; color:#A65A2E;">05</span>
+      <span style="font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:#8B8878;">Reach</span>
+    </div>
+    <h2 data-reveal style="font-family:'Instrument Serif', serif; font-weight:400; margin:0; font-size:clamp(2.4rem,5.4vw,3.8rem); letter-spacing:-0.015em;">Say hi</h2>
+
+    <div data-reveal style="margin-top:50px; max-width:760px;">
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 24px; padding:24px 0; border-top:1px solid #DCD8CB;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:#8B8878;">Email</span>
+        <a href="mailto:chw452777@gmail.com" style="font-family:'Instrument Serif', serif; font-size:1.55rem; color:#14140F; text-decoration:none; border-bottom:1px solid #DCD8CB;" style-hover="color:#A65A2E; border-color:#A65A2E;">chw452777@gmail.com</a>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 24px; padding:24px 0; border-top:1px solid #DCD8CB;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:#8B8878;">Résumé</span>
+        <a href="assets/Chuhan-Wang-Resume.pdf" target="_blank" rel="noopener" style="font-family:'Instrument Serif', serif; font-size:1.55rem; color:#14140F; text-decoration:none; border-bottom:1px solid #DCD8CB;" style-hover="color:#A65A2E; border-color:#A65A2E;">Download PDF ↗</a>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 24px; padding:24px 0; border-top:1px solid #DCD8CB;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:#8B8878;">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/chuhan-wang-plsgmo" target="_blank" rel="noopener" style="font-family:'Instrument Serif', serif; font-size:1.55rem; color:#14140F; text-decoration:none; border-bottom:1px solid #DCD8CB;" style-hover="color:#A65A2E; border-color:#A65A2E;">View profile ↗</a>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 24px; padding:24px 0; border-top:1px solid #DCD8CB;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:#8B8878;">Xiaohongshu</span>
+        <a href="https://xhslink.cn/o/1gmBwlnZFpo" target="_blank" rel="noopener" style="font-family:'Instrument Serif', serif; font-size:1.55rem; color:#14140F; text-decoration:none; border-bottom:1px solid #DCD8CB;" style-hover="color:#A65A2E; border-color:#A65A2E;">View profile ↗</a>
+        <span style="width:100%; font-size:.88rem; color:#8B8878;">24.7K likes and saves so far — sometimes i also complain.</span>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 24px; padding:24px 0; border-top:1px solid #DCD8CB;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:#8B8878;">Phone (US)</span>
+        <a href="tel:+12132848616" style="font-family:'Instrument Serif', serif; font-size:1.55rem; color:#14140F; text-decoration:none; border-bottom:1px solid #DCD8CB;" style-hover="color:#A65A2E; border-color:#A65A2E;">+1 213 284 8616</a>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 24px; padding:24px 0; border-top:1px solid #DCD8CB;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:#8B8878;">Phone (CN)</span>
+        <a href="tel:+8618601021858" style="font-family:'Instrument Serif', serif; font-size:1.55rem; color:#14140F; text-decoration:none; border-bottom:1px solid #DCD8CB;" style-hover="color:#A65A2E; border-color:#A65A2E;">+86 186 0102 1858</a>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:6px 24px; padding:24px 0; border-top:1px solid #DCD8CB; border-bottom:1px solid #DCD8CB;">
+        <span style="font-family:'JetBrains Mono', monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:#8B8878;">Timezone</span>
+        <span style="font-family:'Instrument Serif', serif; font-size:1.55rem;">Los Angeles</span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:50px 6vw 70px; max-width:1360px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; border-top:1px solid #DCD8CB; font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:.06em; color:#8B8878;">
+    <span>Chuhan Wang</span>
+    <a href="#top" style="color:#8B8878; text-decoration:none; border-bottom:1px solid #DCD8CB;" style-hover="color:#14140F;">Back to top ↑</a>
+    <span>© 2026</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;liveDemo&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Lab&quot;}}">
+const CATS = {
+  skyline: { label: 'Skyline', note: 'Cities, from far enough away to like them.' },
+  tables:  { label: 'Tables',  note: 'Cafés, and whatever was on the table.' },
+  wild:    { label: 'Wild',    note: 'Where the city stops.' },
+  stolen:  { label: 'Stolen',  note: 'Moments I took without asking.' },
+  all:     { label: 'All',     note: 'Everything, newest camera to oldest.' }
+};
+
+const LA = 'Los Angeles, CA';
+const P16 = 'iPhone 16 Pro Max';
+const P15 = 'iPhone 15 Pro Max';
+const P13 = 'iPhone 13';
+const XT5 = 'Fujifilm X-T5';
+
+const PHOTOS = [
+  { src:'assets/eye2/sky-dtla-1.jpg',   cat:'skyline', alt:'Downtown street at golden hour', place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/tab-la.jpg',       cat:'tables',  alt:'Matcha on a café counter',       place:LA, when:'Sept 2026', device:P16 },
+  { src:'assets/eye2/wild-hills.jpg',   cat:'wild',    alt:'Golden hillside at dusk',        place:'Malibu, CA', when:'May 2026', device:P16 },
+  { src:'assets/eye2/sto-gallery.jpg',  cat:'stolen',  alt:'A painting on a gallery wall',   place:'New York, NY', when:'Dec 2023', device:P13 },
+  { src:'assets/eye2/sky-facade.jpg',   cat:'skyline', alt:'Ornate facade in low sun',       place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/tab-matcha.jpg',   cat:'tables',  alt:'Matcha and pastries from above', place:'Toronto, ON', when:'Jan 2024', device:P15 },
+  { src:'assets/eye2/wild-banff.jpg',   cat:'wild',    alt:'Mountains beyond a fire pit',    place:'Banff, AB', when:'May 2023', device:P13 },
+  { src:'assets/eye2/sto-luxor.jpg',    cat:'stolen',  alt:'A horse carriage by the water',  place:'Luxor, Egypt', when:'Jun 2025', device:P13 },
+  { src:'assets/eye2/sky-dtla-2.jpg',   cat:'skyline', alt:'Street running downhill',        place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/tab-shanghai.jpg', cat:'tables',  alt:'Three cups on a counter',        place:'Shanghai', when:'May 2026', device:P16 },
+  { src:'assets/eye2/wild-water.jpg',   cat:'wild',    alt:'Reeds against still water',      place:'Malibu, CA', when:'May 2026', device:P16 },
+  { src:'assets/eye2/sto-graffiti.jpg', cat:'stolen',  alt:'A figure against a painted wall',place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/sky-toronto.jpg',  cat:'skyline', alt:'City skyline at dusk',           place:'—', when:'—', device:'—' },
+  { src:'assets/eye2/tab-window.jpg',   cat:'tables',  alt:'Café window looking onto snow',  place:'—', when:'Feb 2024', device:XT5 },
+  { src:'assets/eye2/wild-blossom.jpg', cat:'wild',    alt:'Blossom over a parked car',      place:LA, when:'Mar 2026', device:P16 },
+  { src:'assets/eye2/sto-rain.jpg',     cat:'stolen',  alt:'A street in the rain',           place:'—', when:'May 2026', device:P16 },
+  { src:'assets/eye2/sky-dtla-3.jpg',   cat:'skyline', alt:'Traffic under tall buildings',   place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/tab-latte.jpg',    cat:'tables',  alt:'A latte held in one hand',       place:LA, when:'Jan 2026', device:P16 },
+  { src:'assets/eye2/wild-jacaranda.jpg',cat:'wild',   alt:'Jacaranda in full bloom',        place:LA, when:'Apr 2026', device:P16 },
+  { src:'assets/eye2/sto-platform.jpg', cat:'stolen',  alt:'Empty platform at night',        place:'Waterloo, ON', when:'Jul 2024', device:P15 },
+  { src:'assets/eye2/sky-montreal.jpg', cat:'skyline', alt:'City seen from a hillside',      place:'—', when:'Oct 2023', device:XT5 },
+  { src:'assets/eye2/tab-beijing.jpg',  cat:'tables',  alt:'Dessert on a stone counter',     place:'Beijing', when:'Jun 2026', device:P16 },
+  { src:'assets/eye2/wild-birds.jpg',   cat:'wild',    alt:'Birds on wires under a pale moon',place:LA, when:'Feb 2026', device:P16 },
+  { src:'assets/eye2/sto-signs.jpg',    cat:'stolen',  alt:'Hand-painted signs stacked up',  place:'Cairo, Egypt', when:'May 2025', device:P13 },
+  { src:'assets/eye2/sky-dtla-4.jpg',   cat:'skyline', alt:'Brake lights down a long avenue',place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/tab-qingdao.jpg',  cat:'tables',  alt:'Cake and iced coffee',           place:'Qingdao', when:'Jul 2026', device:P16 },
+  { src:'assets/eye2/wild-deer.jpg',    cat:'wild',    alt:'Deer in snow seen in a car mirror',place:'—', when:'Feb 2024', device:XT5 },
+  { src:'assets/eye2/sto-hoodie.jpg',   cat:'stolen',  alt:'Person in a hoodie by a brick wall',place:'—', when:'Aug 2024', device:XT5 },
+  { src:'assets/eye2/sky-dtla-5.jpg',   cat:'skyline', alt:'Evening traffic downtown',       place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/tab-counter.jpg',  cat:'tables',  alt:'A matcha on a bare counter',     place:LA, when:'Apr 2026', device:P16 },
+  { src:'assets/eye2/sto-statue.jpg',   cat:'stolen',  alt:'Statue against a stone facade',  place:'—', when:'—', device:'—' },
+  { src:'assets/eye2/sky-dusk.jpg',     cat:'skyline', alt:'Street lights coming on at dusk',place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/tab-patio.jpg',    cat:'tables',  alt:'Iced matcha on a patio table',   place:LA, when:'Sept 2025', device:P16 },
+  { src:'assets/eye2/sky-dome.jpg',     cat:'skyline', alt:'Domed civic building and flag',  place:'—', when:'Feb 2024', device:XT5 },
+  { src:'assets/eye2/sky-canal.jpg',    cat:'skyline', alt:'Canal and bridge in spring',     place:'—', when:'May 2025', device:'Canon EOS R50' }
+];
+
+const ME = ['assets/me/me-1.jpg', 'assets/me/me-3.jpg', 'assets/me/me-2.jpg'];
+
+class Component extends DCLogic {
+  state = { filter: 'all', hover: -1, open: {}, me: 0 };
+
+  wireStrip(el) {
+    el.__wired = true;
+    let down = false, sx = 0, sl = 0, moved = 0;
+    const update = () => {
+      if (!this.prog) return;
+      const max = el.scrollWidth - el.clientWidth;
+      const frac = max > 0 ? el.scrollLeft / max : 0;
+      const vis = Math.max(6, (el.clientWidth / el.scrollWidth) * 100);
+      this.prog.style.width = vis + '%';
+      this.prog.style.left = (frac * (100 - vis)) + '%';
+    };
+    el.addEventListener('scroll', update, { passive: true });
+    el.addEventListener('pointerdown', (e) => {
+      down = true; moved = 0; sx = e.clientX; sl = el.scrollLeft;
+      el.style.cursor = 'grabbing'; el.setPointerCapture(e.pointerId);
+    });
+    el.addEventListener('pointermove', (e) => {
+      if (!down) return;
+      const d = e.clientX - sx; moved = Math.abs(d);
+      el.scrollLeft = sl - d;
+    });
+    const up = () => { down = false; el.style.cursor = 'grab'; };
+    el.addEventListener('pointerup', up);
+    el.addEventListener('pointercancel', up);
+    el.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      if ((el.scrollLeft <= 0 && e.deltaY < 0) || (el.scrollLeft >= el.scrollWidth - el.clientWidth - 1 && e.deltaY > 0)) return;
+      e.preventDefault(); el.scrollLeft += e.deltaY;
+    }, { passive: false });
+    requestAnimationFrame(update);
+  }
+
+  mountDemo(a) {
+    if (!(this.props.liveDemo ?? false)) return;
+    const frame = a.querySelector('div');
+    if (!frame || frame.querySelector('iframe')) return;
+    const wrap = document.createElement('div');
+    wrap.setAttribute('data-demo', '');
+    wrap.style.cssText = 'position:absolute; inset:0; background:#14140F; opacity:0; transition:opacity .45s ease; display:flex; flex-direction:column;';
+    const bar = document.createElement('div');
+    bar.style.cssText = "height:26px; flex:0 0 auto; background:#22211A; display:flex; align-items:center; gap:6px; padding:0 10px; font-family:'JetBrains Mono', monospace; font-size:9px; color:#8F8B7C; letter-spacing:.04em;";
+    bar.innerHTML = '<span style="width:6px;height:6px;border-radius:50%;background:#4A4839;"></span><span style="width:6px;height:6px;border-radius:50%;background:#4A4839;"></span><span style="width:6px;height:6px;border-radius:50%;background:#4A4839;"></span>';
+    const url = document.createElement('span');
+    url.textContent = a.getAttribute('href').replace('https://', '');
+    url.style.cssText = 'margin-left:8px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;';
+    bar.appendChild(url);
+    const ifr = document.createElement('iframe');
+    ifr.src = a.getAttribute('href');
+    ifr.loading = 'lazy';
+    ifr.style.cssText = 'flex:1 1 auto; width:100%; border:0; background:#0E0E0A;';
+    ifr.addEventListener('load', () => { wrap.style.opacity = '1'; });
+    wrap.appendChild(bar);
+    wrap.appendChild(ifr);
+    frame.appendChild(wrap);
+    this.demoTimer = setTimeout(() => { wrap.style.opacity = '1'; }, 1800);
+  }
+
+  unmountDemo(a) {
+    const frame = a.querySelector('div');
+    const w = frame && frame.querySelector('[data-demo]');
+    if (w) { w.style.opacity = '0'; setTimeout(() => w.remove(), 400); }
+  }
+
+  toggle(key) {
+    this.setState((s) => ({ open: Object.assign({}, s.open, { [key]: !s.open[key] }) }));
+  }
+
+  panelStyle(key) {
+    const on = !!this.state.open[key];
+    return 'overflow:hidden; max-height:' + (on ? '240px' : '0px') + '; opacity:' + (on ? '1' : '0') +
+      '; transition:max-height .5s cubic-bezier(.2,.7,.2,1), opacity .4s ease;';
+  }
+
+  iconStyle(key) {
+    const on = !!this.state.open[key];
+    return 'font-family:\'JetBrains Mono\', monospace; font-size:1rem; line-height:1; color:' +
+      (on ? '#A65A2E' : '#8B8878') + '; border:1px solid ' + (on ? '#A65A2E' : '#DCD8CB') +
+      '; width:26px; height:26px; display:flex; align-items:center; justify-content:center; flex:0 0 auto;' +
+      ' transform:rotate(' + (on ? '45deg' : '0deg') + '); transition:all .4s cubic-bezier(.2,.7,.2,1);';
+  }
+
+  componentDidMount() {
+    this.cursor = this.cursorRef;
+    const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (fine && this.cursor) {
+      this.cursor.style.opacity = '1';
+      document.body.style.cursor = 'none';
+      let mx = 0, my = 0, cx = 0, cy = 0;
+      this.onMove = (e) => { mx = e.clientX; my = e.clientY; };
+      window.addEventListener('mousemove', this.onMove);
+      const loop = () => {
+        cx += (mx - cx) * 0.2; cy += (my - cy) * 0.2;
+        if (this.cursor) this.cursor.style.transform = 'translate(' + cx + 'px,' + cy + 'px)';
+        this.raf = requestAnimationFrame(loop);
+      };
+      loop();
+      this.grow = () => { const c = this.cursor; if (!c) return;
+        c.style.width = '52px'; c.style.height = '52px'; c.style.margin = '-26px 0 0 -26px';
+        c.style.background = 'transparent'; c.style.border = '1px solid #EDEAE0'; };
+      this.shrink = () => { const c = this.cursor; if (!c) return;
+        c.style.width = '9px'; c.style.height = '9px'; c.style.margin = '-4.5px 0 0 -4.5px';
+        c.style.background = '#14140F'; c.style.border = 'none'; };
+      this.bindHover();
+    }
+
+    const reveals = document.querySelectorAll('[data-reveal]');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      reveals.forEach((el) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)';
+      });
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.style.opacity = '1';
+            en.target.style.transform = 'none';
+            this.io.unobserve(en.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      reveals.forEach((el) => this.io.observe(el));
+    }
+  }
+
+  bindHover() {
+    if (!this.grow) return;
+    document.querySelectorAll('a, button').forEach((el) => {
+      if (el.__bound) return;
+      el.__bound = true;
+      el.style.cursor = 'none';
+      el.addEventListener('mouseenter', this.grow);
+      el.addEventListener('mouseleave', this.shrink);
+    });
+  }
+
+  componentDidUpdate() { this.bindHover(); }
+
+  componentWillUnmount() {
+    if (this.raf) cancelAnimationFrame(this.raf);
+    if (this.onMove) window.removeEventListener('mousemove', this.onMove);
+    if (this.io) this.io.disconnect();
+    document.body.style.cursor = '';
+  }
+
+  renderVals() {
+    const filter = this.state.filter;
+    const keys = ['all', 'skyline', 'tables', 'wild', 'stolen'];
+    const cats = keys.map((k) => {
+      const on = filter === k;
+      return {
+        key: k,
+        label: CATS[k].label,
+        pick: () => { if (this.strip) this.strip.scrollTo({ left: 0, behavior: 'smooth' }); this.setState({ filter: k, hover: -1 }); },
+        style: 'font-family:\'JetBrains Mono\', monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; padding:9px 16px; border-radius:2px; background:' +
+          (on ? '#EDEAE0' : 'transparent') + '; color:' + (on ? '#14140F' : '#9B9787') +
+          '; border:1px solid ' + (on ? '#EDEAE0' : '#3A382E') + '; cursor:pointer; transition:all .3s ease;'
+      };
+    });
+
+    const list = PHOTOS.filter((p) => filter === 'all' || p.cat === filter).map((p, i) => ({
+      src: p.src,
+      alt: p.alt,
+      catLabel: CATS[p.cat].label,
+      place: p.place,
+      when: p.when,
+      device: p.device,
+      enter: () => this.setState({ hover: i }),
+      leave: () => this.setState({ hover: -1 }),
+      imgStyle: 'height:100%; width:auto; max-width:none; display:block; user-select:none; transition:transform 1.1s cubic-bezier(.2,.7,.2,1), filter .5s ease; transform:scale(' +
+        (this.state.hover === i ? '1.04' : '1') + '); filter:brightness(' + (this.state.hover === i ? '.6' : '1') + ');',
+      metaStyle: 'position:absolute; left:0; right:0; bottom:0; padding:20px; pointer-events:none; opacity:' +
+        (this.state.hover === i ? '1' : '0') + '; transform:translateY(' + (this.state.hover === i ? '0' : '8px') +
+        '); transition:opacity .35s ease, transform .45s cubic-bezier(.2,.7,.2,1);'
+    }));
+
+    return {
+      cats,
+      catNote: CATS[filter].note,
+      frameCount: String(list.length).padStart(2, '0') + ' frames',
+      photos: list,
+      stripRef: (el) => { this.strip = el; if (el && !el.__wired) this.wireStrip(el); },
+      progRef: (el) => { this.prog = el; },
+      toggleBaidu: () => this.toggle('baidu'),
+      toggleMnb: () => this.toggle('mnb'),
+      baiduPanelStyle: this.panelStyle('baidu'),
+      mnbPanelStyle: this.panelStyle('mnb'),
+      baiduIconStyle: this.iconStyle('baidu'),
+      mnbIconStyle: this.iconStyle('mnb'),
+      mePhotos: ME.map((src, i) => {
+        const off = (i - this.state.me + ME.length) % ME.length;
+        const rot = [0, -3.5, 3][off] ?? 0;
+        return {
+          src,
+          style: 'position:absolute; inset:0; overflow:hidden; background:#E9E6DC url(' + src + ') center/cover no-repeat; box-shadow:0 ' + (6 + off * 4) + 'px ' + (22 + off * 8) +
+            'px rgba(20,20,15,' + (0.16 - off * 0.04) + '); transform:rotate(' + rot + 'deg) translate(' + (off * 7) + 'px,' + (off * -6) +
+            'px) scale(' + (1 - off * 0.035) + '); z-index:' + (ME.length - off) + '; opacity:' + (off > 2 ? 0 : 1) +
+            '; transition:transform .55s cubic-bezier(.2,.7,.2,1), box-shadow .55s ease, opacity .4s ease;'
+        };
+      }),
+      meCount: String(this.state.me + 1).padStart(2, '0') + ' / ' + String(ME.length).padStart(2, '0'),
+      nextMe: () => this.setState((s) => ({ me: (s.me + 1) % ME.length })),
+      zoomIn: (e) => { const img = e.currentTarget.querySelector('img'); if (img) img.style.transform = 'scale(1.045)'; this.mountDemo(e.currentTarget); },
+      zoomOut: (e) => { const img = e.currentTarget.querySelector('img'); if (img) img.style.transform = 'scale(1)'; this.unmountDemo(e.currentTarget); },
+      cursorRef: (el) => { this.cursorRef = el; }
+    };
+  }
+}
+</script>
+</body>
+</html>
